@@ -1,12 +1,16 @@
-#set the folder_dir to the folder with the zip files and run!
+# Set the folder_dir to the folder with the zip files and run!
 
-library(plyr)
+##############################
+# 0 - LOAD PACKAGE   
+##############################
+library(plyr) #1.8.6
 
-
+############################## 
+# 1 - LOAD DATA
+##############################
 folder_dir <- "the_path"
   
 setwd(folder_dir)
-
 
 zipF <- list.files(path = folder_dir, pattern = "*.zip", full.names = TRUE)
 zipF <- zipF[!grepl("\\(", zipF)]
